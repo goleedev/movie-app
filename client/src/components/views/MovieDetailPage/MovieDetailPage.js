@@ -3,9 +3,11 @@ import { Descriptions, Button, Row } from 'antd'
 import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../Config"
 import MainImage from '../LandingPage/Sections/MainImage';
 import GridCard from '../LandingPage/Sections/GridCard'
+import Favorite from './Sections/Favorite'
 
 function MovieDetailPage(props) {
     const movieId = props.match.params.movieId
+
     const [Movie, setMovie] = useState([])
     const [Crews, setCrews] = useState([])
     const [ActorToggle, setActorToggle] = useState(false)
@@ -41,8 +43,8 @@ function MovieDetailPage(props) {
 
             {/* Body */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Button> Add to Favorite </Button>    
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <Favorite userFrom={localStorage.getItem('userId')} movieId={movieId} movieInfo={Movie} />
                 </div>
 
                 {/* Movie Info Table */}
