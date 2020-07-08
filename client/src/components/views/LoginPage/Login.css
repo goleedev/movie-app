@@ -1,0 +1,33 @@
+div{
+    color: #fafaf6;
+}
+
+.login-form-remember span {
+    color: #fafaf6 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #ea7659;
+    border-color: #ea7659;
+}
+
+.login-form-register,
+.login-form-forgot {
+    color: #f08a5d;
+}
+
+.login-form-register:hover,
+.login-form-forgot:hover {
+    color: #ea7659;
+}
+
+.login-form-button {
+   min-width: 100%;
+   background-color: #f08a5d !important;
+   color: #fafaf6 !important; 
+   border: #f08a5d !important;
+}
+
+.login-form-button:hover {
+    background-color: #ea7659 !important;
+}

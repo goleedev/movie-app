@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../Config"
 import MainImage from "./Sections/MainImage";
 import GridCard from "./Sections/GridCard"
-import { Typography, Row } from 'antd';
+import { Typography, Row, Button } from 'antd';
 const { Title } = Typography;
 
 function LandingPage() {
@@ -45,7 +45,7 @@ function LandingPage() {
             {/* Body */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
-                <Title level={2} > Movies by latest </Title>
+                <Title className="latest__movies" level={3} > Latest Movies 🍿</Title>
                 <hr />
                 
                 {/* Grid Card */}
@@ -63,7 +63,7 @@ function LandingPage() {
                 {/* Load More Button */}
                 <br />
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <button onClick={handleClick} className="loadMore">Load More</button>
+                    <Button onClick={handleClick} className="loadMore">Load More</Button>
                 </div>
 
             </div>

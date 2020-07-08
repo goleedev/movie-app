@@ -1,22 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Source Sans Pro', sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #24292e;
-  background-color: #fff;
+  color: #fafaf6;
+  background-color: #000;
 }
 
 .app {
@@ -28,12 +22,39 @@ body {
 }
 
 input.error {
-  border-color: red;
+  border-color: #ea7659;
 }
 
 
 .input-feedback {
-  color: red;
+  color: #ea7659;
   height: 5px;
   margin-top: -12px;
+}
+
+.loadMore::before,
+.loadMore::after {
+  color: #000;
+  background-color: #fafaf6;
+  border: none;
+}
+
+.loadMore:focus,
+.loadMore:hover {
+  color: #ea7659 !important;
+  border-color: #ea7659 !important;
+}
+
+.main__title {
+  text-shadow: 5px 5px 5px #000;
+}
+
+.latest__movies {
+  text-transform: uppercase;
+  color: #fafaf6 !important;
+}
+
+ul > li > a:hover {
+  text-decoration: none;
+  color: #ea7659 !important;
 }

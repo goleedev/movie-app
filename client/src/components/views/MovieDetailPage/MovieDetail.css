@@ -1,0 +1,53 @@
+.ant-btn::before,
+.ant-btn::after {
+  color: #000;
+  background-color: #fafaf6;
+  border: none;
+}
+
+.ant-btn:focus,
+.ant-btn:hover {
+  color: #ea7659 !important;
+  border-color: #ea7659 !important;
+}
+
+img {    
+    border: 1px solid #fafaf6;
+}
+
+.crew__container {
+}
+
+.crew__display img{
+    align-items: center;
+}
+
+.crew__display:hover img {
+    transform: translate(10px, 10px);
+    border: 1px solid #ea7659;
+    box-shadow: 5px 5px #ea7659;
+}
+
+.crew__hover {
+    font-size: 1rem;
+    color: #fafaf6;
+    font-weight: bold;
+    background-color: #000;
+}
+
+.crew__display:hover .crew__hover {
+    transform: translate(10px, 10px);
+    background-color: #ea7659;
+}
+
+figcaption {
+    display: block;
+    float: left;
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+}
+
+.movie__info {
+    background-color: #000;
+}

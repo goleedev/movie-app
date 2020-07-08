@@ -48,12 +48,9 @@ function FavoritePage() {
 
 
         return <tr key={index}>
-            {/* <Popover title={`${movie.movieTitle}`}>
-                
-            </Popover> */}
             <td>{movie.movieTitle}</td>
             <td>{movie.movieRunTime} mins</td>
-            <td><Button onClick={() => onClickRemove(movie.movieId)}>Remove from the Faves</Button></td>
+            <td><Button onClick={() => onClickRemove(movie.movieId)}>Remove</Button></td>
         </tr>
     })
 

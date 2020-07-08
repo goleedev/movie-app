@@ -1,9 +1,9 @@
 import React from 'react'
-import {Icon} from 'antd';
+import './Footer.css'
 
 function Footer() {
     return (
-        <div style={{
+        <div className="footer" style={{
             height: '80px', display: 'flex',
             flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', fontSize:'1rem'

@@ -4,6 +4,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../Config"
 import MainImage from '../LandingPage/Sections/MainImage';
 import GridCard from '../LandingPage/Sections/GridCard'
 import Favorite from './Sections/Favorite'
+import './MovieDetail.css'
 
 function MovieDetailPage(props) {
     const movieId = props.match.params.movieId
@@ -31,7 +32,7 @@ function MovieDetailPage(props) {
     }
 
     return (
-        <div>
+        <div style={{ width: '100%', height: '600px'}}>
             {/* Movie Main Image */}
             {Movie && 
                 <MainImage
@@ -43,12 +44,12 @@ function MovieDetailPage(props) {
 
             {/* Body */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
-                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <div className="addFave" style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     <Favorite userFrom={localStorage.getItem('userId')} movieId={movieId} movieInfo={Movie} />
                 </div>
 
                 {/* Movie Info Table */}
-                <Descriptions title="Movie Info" bordered>
+                <Descriptions className="movie__info" title="Movie Info" bordered>
                     <Descriptions.Item label="Title">{Movie.original_title}</Descriptions.Item>
                     <Descriptions.Item label="release_date">{Movie.release_date}</Descriptions.Item>
                     <Descriptions.Item label="revenue">{Movie.revenue}</Descriptions.Item>
@@ -70,10 +71,14 @@ function MovieDetailPage(props) {
                 {ActorToggle && 
                 <Row gutter={[16, 16]}>
                     {Crews && Crews.map((crew, index) => (
+                        
                         <React.Fragment key={index}>
                             {crew.profile_path &&
                             <GridCard
-                                actor image={`${IMAGE_BASE_URL}w1280${crew.profile_path}`}
+                                className='crew__card'
+                                actor
+                                image={`${IMAGE_BASE_URL}w1280${crew.profile_path}`}
+                                characterName={crew.name} 
                             />
                             }
                         </React.Fragment>

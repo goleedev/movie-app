@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
 import Auth from "../hoc/auth";
+import "./App.css"
 
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
@@ -14,7 +15,7 @@ function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
       <NavBar />
-      <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
+      <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)', backgroundColor: '#000' }}>
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />

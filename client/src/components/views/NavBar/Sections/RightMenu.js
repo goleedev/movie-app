@@ -5,6 +5,7 @@ import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import './Navbar.css'
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
@@ -33,7 +34,7 @@ function RightMenu(props) {
   } else {
     return (
       <Menu mode={props.mode}>
-        <Menu.Item key="logout">
+        <Menu.Item className="menu__page" key="logout">
           <a onClick={logoutHandler}>Logout</a>
         </Menu.Item>
       </Menu>
